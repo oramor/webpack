@@ -3,8 +3,8 @@ import webpack from 'webpack';
 
 console.log('-----------------------------------------');
 
-const dstPath = '/home/romaro/webpack/webpack-ts/dist';
-const srcPath = '/home/romaro/webpack/webpack-ts/src';
+const dstPath = '/home/romaro/webpack/webpack-ts-config/dist';
+const srcPath = '/home/romaro/webpack/webpack-ts-config/src';
 
 //const __dirname = '/home/romaro/webpack/webpack-ts';
 

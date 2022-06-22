@@ -10,5 +10,10 @@ yarn add -D sass sass-loader mini-css-extract-plugin css-loader
 
 # TypeScript
 ```
-yarn add -D typescript ts-node ts-loader @types/node @types/webpack
+yarn add -D typescript ts-loader @types/node @types/webpack
+```
+
+# TS Config
+```
+yarn add -D ts-node @types/webpack
 ```
