@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "ES5",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node"
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "commonjs",
+            "target": "es5",
+            "esModuleInterop": true
+        },
+    }
+}
