@@ -17,3 +17,13 @@ yarn add -D typescript ts-loader @types/node @types/webpack
 ```
 yarn add -D ts-node @types/webpack
 ```
+
+# Dev Server
+```
+yarn add -D webpack-dev-server
+```
+
+# HtmlWebpackPlugin
+```
+yarn add -D html-webpack-plugin
+```
