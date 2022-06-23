@@ -9,6 +9,7 @@ export default {
     resolve: {
         modules: ['/home/romaro/webpack/node_modules', 'node_modules'],
     },
+    mode: 'development',
     context: srcPath,
     entry: './entry.js',
     output: {
@@ -27,8 +28,32 @@ export default {
     module: {
         rules: [
             {
-                test: /\.s[ac]ss$/,
+                /**
+                 * Для файлов без модульного постфикса (в данном случае .m)
+                 * выполняется стандартная обработка
+                 */
+                test: /^((?!\.m).)*s[ac]ss$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            },
+            {
+                /**
+                 * Для всех файлов, которые содержат постфикс ".m" (например,
+                 * test.m.scss) будет применяться модульная инкапсуляция
+                 * стилей
+                 */
+                test: /\.m\.s[ac]ss$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                localIdentName: '[local]__[sha1:hash:hex:7]',
+                            },
+                        },
+                    },
+                    'sass-loader',
+                ],
             },
             {
                 test: /\.woff(2)?$/,
