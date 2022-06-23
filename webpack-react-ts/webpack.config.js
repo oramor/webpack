@@ -1,19 +1,23 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const __dirname = '/home/romaro/webpack/webpack-react-ts/';
 const dstPath = __dirname + 'dist';
 const srcPath = __dirname + 'src';
 
 export default {
-    entry: './Hello.tsx',
+    entry: './main.tsx',
     mode: 'development',
     context: srcPath,
     output: {
         path: dstPath,
         filename: '[name].bundle.js',
     },
-    plugins: [new CleanWebpackPlugin()],
     resolve: {
+        /**
+         * Если в импорте явно не указано расширение файла,
+         * по умолчанию ищется только js.
+         */
         extensions: ['.tsx', '.ts', '.js'],
     },
     module: {
@@ -25,6 +29,13 @@ export default {
             },
         ],
     },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: 'main.html',
+            filename: './main.html',
+        }),
+    ],
     devServer: {
         static: {
             directory: srcPath,
