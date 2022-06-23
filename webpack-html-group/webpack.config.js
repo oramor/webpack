@@ -7,7 +7,7 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const __dirname = '/home/romaro/webpack/plugin-HtmlWebpackPlugin/';
+const __dirname = '/home/romaro/webpack/webpack-html-group/';
 const dstPath = __dirname + 'dist';
 const srcPath = __dirname + 'src';
 
