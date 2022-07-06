@@ -1,15 +1,19 @@
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const __dirname = '/home/romaro/webpack/webpack-basic/';
-const dstPath = __dirname + 'dist';
-const srcPath = __dirname + 'src';
+const outDir = __dirname + 'dist';
+const srcDir = __dirname + 'src';
 
 export default {
+    /**
+     * Указывается относительно директории, которая была задана
+     * в качестве выходной (outputDir)
+     */
     entry: './entry.js',
     mode: 'development',
-    context: srcPath,
+    context: srcDir,
     output: {
-        path: dstPath,
+        path: outDir,
         filename: '[name].bundle.js',
     },
     plugins: [new CleanWebpackPlugin()],

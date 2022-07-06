@@ -1,4 +1,4 @@
-# Basic
+# Webpack
 ```
 yarn add -D webpack webpack-cli clean-webpack-plugin
 ```

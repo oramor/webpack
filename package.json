@@ -5,7 +5,8 @@
     "type": "module",
     "scripts": {
         "scss": "npx webpack --config webpack-scss/webpack.config.js --mode development",
-        "ts": "npx webpack --config webpack-ts/webpack.config.ts --mode development"
+        "ts": "npx webpack --config webpack-ts/webpack.config.ts --mode development",
+        "webpack-dev-server-multipage": "npx webpack serve --config webpack-dev-server-multipage/webpack.config.js"
     },
     "repository": {
         "type": "git",
