@@ -1,9 +1,11 @@
+import { URL } from 'url';
+import path from 'path';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const __dirname = '/home/romaro/webpack/webpack-html/';
-const dstPath = __dirname + 'dist';
-const srcPath = __dirname + 'src';
+const __dirname = new URL('.', import.meta.url).pathname;
+const dstPath = path.join(__dirname, 'dist');
+const srcPath = path.join(__dirname, 'src');
 
 export default {
     entry: './main.js',
